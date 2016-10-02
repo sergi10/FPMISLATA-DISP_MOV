@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">LinearLayout</string>
+    <string name="cabecera">Carrito de la Compra</string>
+    <string name="product1">Producto 1</string>
+    <string name="product2">Producto 2</string>
+    <string name="product3">Producto 3</string>
+    <string name="unidades">Unidades</string>
+    <string name="ButtonSend">Enviar por Correo Electrónico</string>
+    <string name="importe">Importe</string>
+    <string name="zero€">0,00 €</string>
+    <string name="iva">I.V.A.</string>
+    <string name="total">Total</string>
+    <string name="ButtonVolver">Volver</string>
+    <string name="ButtonConfirmar">Confirmar</string>
+    cabecera
+</resources>
