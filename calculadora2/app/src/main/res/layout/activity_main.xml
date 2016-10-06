@@ -18,7 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/tvResultado"
-        tools:text="0,00"
+        tools:text="RESULTADO"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:fontFamily="casual"
         android:textStyle="normal|bold"
@@ -76,21 +76,6 @@
                 android:textStyle="normal|bold"
                 android:textSize="30sp" />
 
-            <Button
-                android:text="0"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/button0"
-                android:layout_row="0"
-                android:layout_column="1"
-                android:layout_weight="1"
-                android:padding="1dp"
-                android:layout_margin="1dp"
-                android:fontFamily="casual"
-                android:textStyle="normal|bold"
-                android:textSize="30sp"
-                android:onClick="button0_clicked()" />
-
         </LinearLayout>
 
         <LinearLayout
@@ -109,7 +94,6 @@
                 android:layout_margin="1dp"
                 android:fontFamily="casual"
                 android:textStyle="normal|bold"
-                android:onClick="button8_clicked()"
                 android:textSize="30sp" />
 
             <Button
@@ -123,7 +107,6 @@
                 android:layout_margin="1dp"
                 android:fontFamily="casual"
                 android:textStyle="normal|bold"
-                android:onClick="button5_clicked()"
                 android:textSize="30sp" />
 
             <Button
@@ -137,22 +120,6 @@
                 android:layout_margin="1dp"
                 android:fontFamily="casual"
                 android:textStyle="normal|bold"
-                android:onClick="button2_clicked()"
-                android:textSize="30sp" />
-
-            <Button
-                android:text="="
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/buttonIgual"
-                android:layout_row="0"
-                android:layout_column="1"
-                android:layout_weight="1"
-                android:padding="1dp"
-                android:layout_margin="1dp"
-                android:fontFamily="casual"
-                android:textStyle="normal|bold"
-                android:onClick="buttonCompute_clicked()"
                 android:textSize="30sp" />
         </LinearLayout>
 
@@ -173,7 +140,6 @@
                 android:layout_margin="1dp"
                 android:fontFamily="casual"
                 android:textStyle="normal|bold"
-                android:onClick="button9_clicked()"
                 android:textSize="30sp" />
 
             <Button
@@ -188,7 +154,6 @@
                 android:layout_weight="1"
                 android:fontFamily="casual"
                 android:textStyle="normal|bold"
-                android:onClick="button6_clicked()"
                 android:textSize="30sp" />
 
             <Button
@@ -203,29 +168,12 @@
                 android:layout_weight="1"
                 android:fontFamily="casual"
                 android:textStyle="normal|bold"
-                android:onClick="button3_clicked()"
                 android:textSize="30sp" />
-
-            <Button
-                android:text="CE"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/buttonClear"
-                android:layout_row="0"
-                android:layout_column="1"
-                android:layout_weight="1"
-                android:padding="1dp"
-                android:layout_margin="1dp"
-                android:fontFamily="casual"
-                android:textStyle="normal|bold"
-                android:onClick="buttonCompute_clicked()"
-                android:textSize="30sp" />
-
         </LinearLayout>
 
         <LinearLayout
             android:orientation="vertical"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <Button
@@ -243,7 +191,6 @@
                 android:textSize="30sp"
                 android:lineSpacingExtra="12sp"
                 android:textStyle="normal|bold"
-                android:onClick="buttonMas_clicked()"
                 android:textAlignment="center" />
 
             <Button
@@ -261,16 +208,16 @@
                 android:textSize="30sp"
                 android:lineSpacingExtra="12sp"
                 android:textStyle="normal|bold"
-                android:onClick="buttonMenos_clicked()"
                 android:textAlignment="center" />
 
             <Button
                 android:text="x"
-                android:layout_width="76dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/buttonMulti"
                 android:layout_row="0"
                 android:layout_column="2"
+                android:layout_weight="1"
                 android:padding="1dp"
                 android:layout_margin="1dp"
                 android:fontFamily="casual"
@@ -278,24 +225,6 @@
                 android:textSize="30sp"
                 android:lineSpacingExtra="12sp"
                 android:textStyle="normal|bold"
-                android:onClick="buttonPor_clicked()"
-                android:textAlignment="center" />
-
-            <Button
-                android:text="/"
-                android:layout_width="77dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/buttonDivision"
-                android:layout_row="0"
-                android:layout_column="2"
-                android:padding="1dp"
-                android:layout_margin="1dp"
-                android:fontFamily="casual"
-                android:typeface="normal"
-                android:textSize="30sp"
-                android:lineSpacingExtra="12sp"
-                android:textStyle="normal|bold"
-                android:onClick="buttonDiv_clicked()"
                 android:textAlignment="center" />
 
         </LinearLayout>
@@ -306,6 +235,50 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+        <Button
+            android:text="0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button0"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_weight="1"
+            android:padding="1dp"
+            android:layout_margin="1dp"
+            android:fontFamily="casual"
+            android:textStyle="normal|bold"
+            android:textSize="30sp" />
+
+        <Button
+            android:text="="
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonIgual"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_weight="1"
+            android:padding="1dp"
+            android:layout_margin="1dp"
+            android:fontFamily="casual"
+            android:textStyle="normal|bold"
+            android:textSize="30sp" />
+
+        <Button
+            android:text="/"
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonDivision"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:padding="1dp"
+            android:layout_margin="1dp"
+            android:fontFamily="casual"
+            android:typeface="normal"
+            android:textSize="30sp"
+            android:lineSpacingExtra="12sp"
+            android:textStyle="normal|bold"
+            android:textAlignment="center" />
 
     </LinearLayout>
 

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Chollos</string>
+    <string name="init_msg">Vienvenidos a Chollos</string>
+    <string name="lbl_user">Usuario</string>
+    <string name="lbl_pass">Password</string>
+    <string name="btn_login">Conectar</string>
+    <string name="btn_lgoout">Salir</string>
+</resources>

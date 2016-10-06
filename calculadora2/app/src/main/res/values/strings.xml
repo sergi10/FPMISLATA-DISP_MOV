@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">calculadora</string>
     <string name="hello_world">Hello World!!!!</string>
-    <string name="textView_Resultado">0</string>
+    <string name="textView_Resultado">Resultado</string>
 </resources>
