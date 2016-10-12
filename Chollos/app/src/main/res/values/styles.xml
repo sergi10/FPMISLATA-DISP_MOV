@@ -7,5 +7,44 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+    
+
+    <style name="MyField">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">normal|bold</item>
+        <item name="android:textColor">@android:color/holo_purple</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+    <style name="InputField" parent="MyField">
+        <item name="android:fontFamily">casual</item>
+        <item name="android:lineSpacingExtra">24sp</item>
+        <item name="android:textSize">36sp</item>
+        <item name="android:textColor">@android:color/background_dark</item>
+    </style>
+    <style name="MyEditTExt" parent="MyField">
+        <item name="android:textColor">@android:color/holo_orange_dark</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:ems">5</item>
+    </style>
+    <style name="MyBotonGrey" parent="@android:style/Widget.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@android:color/holo_orange_dark</item>
+        <item name="android:layout_margin">20dp</item>
+        <item name="android:textStyle">normal|bold</item>
+        <item name="android:background">@android:color/darker_gray</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 </resources>
