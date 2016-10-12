@@ -12,8 +12,9 @@ public class MainActivity extends AppCompatActivity {
     private int operador1 = 0;
     private int operador2 = 0;
     private TextView resultado;
-    private String temp ="";
-    private  boolean pendingOp = false;
+    private String temp = "";
+    private boolean pendingOp = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 temp += "0";
                 resultado.setText(temp);
-                if ((!pendingOp) & (operacion > 0)){
+                if ((!pendingOp) & (operacion > 0)) {
                     clearDisplay();
                 }
 
@@ -52,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 temp += "1";
                 resultado.setText(temp);
-                if ((!pendingOp) & (operacion > 0)){
+                if ((!pendingOp) & (operacion > 0)) {
                     clearDisplay();
                 }
             }
@@ -62,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 temp += "2";
                 resultado.setText(temp);
-                if ((!pendingOp) & (operacion > 0)){
+                if ((!pendingOp) & (operacion > 0)) {
                     clearDisplay();
                 }
             }
@@ -72,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 temp += "3";
                 resultado.setText(temp);
-                if ((!pendingOp) & (operacion > 0)){
+                if ((!pendingOp) & (operacion > 0)) {
                     clearDisplay();
                 }
             }
@@ -82,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 temp += "4";
                 resultado.setText(temp);
-                if ((!pendingOp) & (operacion > 0)){
+                if ((!pendingOp) & (operacion > 0)) {
                     clearDisplay();
                 }
             }
@@ -92,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 temp += "5";
                 resultado.setText(temp);
-                if ((!pendingOp) & (operacion > 0)){
+                if ((!pendingOp) & (operacion > 0)) {
                     clearDisplay();
                 }
             }
@@ -102,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 temp += "6";
                 resultado.setText(temp);
-                if ((!pendingOp) & (operacion > 0)){
+                if ((!pendingOp) & (operacion > 0)) {
                     clearDisplay();
                 }
             }
@@ -112,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 temp += "7";
                 resultado.setText(temp);
-                if ((!pendingOp) & (operacion > 0)){
+                if ((!pendingOp) & (operacion > 0)) {
                     clearDisplay();
                 }
             }
@@ -122,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 temp += "8";
                 resultado.setText(temp);
-                if ((!pendingOp) & (operacion > 0)){
+                if ((!pendingOp) & (operacion > 0)) {
                     clearDisplay();
                 }
             }
@@ -132,7 +133,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 temp += "9";
                 resultado.setText(temp);
-                if ((!pendingOp) & (operacion > 0)){
+                if ((!pendingOp) & (operacion > 0)) {
                     clearDisplay();
                 }
             }
@@ -140,95 +141,101 @@ public class MainActivity extends AppCompatActivity {
         buttonMas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                operador1 = Integer.parseInt(resultado.getText().toString());
-                clearDisplay();
+                operador1 = getValue(resultado.getText().toString());
                 operacion = 1;
-                pendingOp = true;
+
             }
         });
         buttonMenos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                operador1 = Integer.parseInt(resultado.getText().toString());
-                clearDisplay();
+                operador1 = getValue(resultado.getText().toString());
                 operacion = 2;
-                pendingOp = true;
             }
         });
         buttonMulti.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                operador1 = Integer.parseInt(resultado.getText().toString());
-                clearDisplay();
+                operador1 = getValue(resultado.getText().toString());
                 operacion = 3;
-                pendingOp = true;
             }
         });
         buttonDivision.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                operador1 = Integer.parseInt(resultado.getText().toString());
-                clearDisplay();
+                operador1 = getValue(resultado.getText().toString());
                 operacion = 4;
-                pendingOp = true;
             }
         });
         buttonClear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                reset();
                 operador1 = 0;
-                operador2 = 0;
-                operacion = 0;
                 clearDisplay();
-                resultado.setText("0");
+
             }
         });
         buttonIgual.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                operador2 = Integer.parseInt(resultado.getText().toString());
+                if (temp != "") {
+                    operador2 = getValue(resultado.getText().toString());
+                } else {
+                    operador2 = 0;
+                }
                 int result = 0;
-                if (1 == operacion)
-                {
+                String resultTxt = "";
+                if (1 == operacion) {
                     result = operador1 + operador2;
-                }
-                else if (2 == operacion)
-                {
+                } else if (2 == operacion) {
                     result = operador1 - operador2;
-                }
-                else if (3 == operacion)
-                {
+                } else if (3 == operacion) {
                     result = operador1 * operador2;
-                }
-                else if (4 == operacion)
-                {
-                    if(operador2 == 0){
-                        resultado.setText("NaN");
-                    }
-                    else{
+                } else if (4 == operacion) {
+                    if (operador2 == 0) {
+                        resultTxt = "error";
+                    } else {
                         result = operador1 / operador2;
                     }
-
-                }
-                else
-                {
+                } else {
                     result = operador1;
                 }
-                String resultTxt = String.valueOf(result);
+                if (resultTxt != "error") {
+                    resultTxt = String.valueOf(result);
+                    operador1 = result;
+                }
                 resultado.setText(resultTxt);
-                operacion = 0;
-                operador1 = 0;
-                operador2 = 0;
-                pendingOp = false;
-
+                reset();
             }
         });
     }
-    private void clearDisplay(){
+
+    private void clearDisplay() {
         resultado.setText("");
         temp = "";
-        if (!pendingOp){
+        if (!pendingOp) {
             operador2 = 0;
         }
+    }
+
+    private void reset() {
+        operacion = 0;
+        //operador1 = 0;
+        operador2 = 0;
+        pendingOp = false;
+        temp = "";
+        //resultado.setText("0");
+
+    }
+
+    private int getValue(String num) {
+        int res = 0;
+        if (num != "") {
+            res = Integer.parseInt(num);
+            pendingOp = true;
+            clearDisplay();
+        }
+        return res;
     }
 }
