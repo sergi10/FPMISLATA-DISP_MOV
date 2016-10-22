@@ -106,6 +106,13 @@
                 android:textStyle="normal|bold"
                 android:textSize="24sp"
                 android:textColor="?android:attr/textColorHint" />
+
+            <Button
+                android:text="@string/icon_heart"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:id="@+id/buttonFont"
+                android:layout_weight="1" />
         </LinearLayout>
 
     </LinearLayout>

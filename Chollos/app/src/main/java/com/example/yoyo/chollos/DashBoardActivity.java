@@ -11,8 +11,11 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.yoyo.chollos.pojo.Usuario;
+
 public class DashBoardActivity extends AppCompatActivity {
     private TextView msg;
+    private Usuario loged;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,8 +23,10 @@ public class DashBoardActivity extends AppCompatActivity {
         setContentView(R.layout.activity_dash_board);
         msg = (TextView) findViewById(R.id.lbl_welcom);
         Bundle bundle = getIntent().getExtras();
+        Usuario loged;
         if (bundle != null){
             msg.setText("Bienvenido : \n" + bundle.getString("user") + "\nusando el password: \n" + bundle.getString("pass"));
+           // loged = bundle.get("logedOk");
         }
 
         Button buttonLogOut = (Button) findViewById(R.id.btn_logout);

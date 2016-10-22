@@ -34,4 +34,6 @@
     <string name="lbl_newpass">Nuevo Password</string>
     <string name="lbl_repeatpass">Repita Password</string>
     <string name="lbl_confirm">Confirmar</string>
+
+    <string name="icon_heart">&#xf004;</string>
 </resources>
